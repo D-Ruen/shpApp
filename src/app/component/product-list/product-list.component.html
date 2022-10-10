@@ -1,0 +1,16 @@
+<div class="product-list">
+   <div class="papa" *ngFor="let product of products" >
+      <app-product-item [product]="product"
+      (deleteProductItem)="handleDeleteProduct($event)"
+      (displayProductViewModal)="handleDisplayViewModal($event)"></app-product-item>
+   </div>
+   <div class="bar" *ngIf="!products.length">Désolé, aucun article disponible pour le moment</div>
+   <!-- <app-product-item [product]="products[3]"></app-product-item> -->
+
+   <app-modal-product-view 
+   *ngIf="isDisplayModal && modalProduct"
+   [product]="modalProduct"
+   (close)="handleCloseModal()"
+   
+   ></app-modal-product-view>
+</div>

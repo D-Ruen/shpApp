@@ -1,0 +1,21 @@
+footer{
+   
+}
+.footerContent{ 
+    background-color: rgb(34, 177, 69);
+    height:calc(100vh - 70vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    
+
+}
+
+.footerBottom{
+    background-color: rgb(1,43,1);
+    height:70px;
+    
+}
