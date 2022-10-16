@@ -1,14 +1,23 @@
-<div class="product-item" (click)="handleClickProduct(product)">
+
+<div class="product-item" >
     <div class="product-image">
         <img [src]="product ? product.imageUrl[0] :'src/assets/image/Robe-violet.jfif'"  alt="{{product?.name}}">
     </div>
-    <div class="product-details">
-        <div class="product-name">
-            <h2>{{product?.name?.substring(0,40)}} {{ product  && product.name[41] ? "..." : null}}</h2>
+    <div class="below-image">
+        <div class="product-details">
+            <div class="product-name">
+                <h2>{{product?.name?.substring(0,40)}} {{ product  && product.name[41] ? "..." : null}}</h2>
+            </div>
+            <div class="product-prize">
+                <h3>€{{(product?.sold_price || 0)/100}}</h3>
+                <del><h3>€{{(product?.regular_price||0)/100}}</h3></del>
+            </div>
         </div>
-        <div class="product-prize">
-            <h3>€{{(product?.sold_price || 0)/100}}</h3>
-            <del><h3>€{{(product?.regular_price||0)/100}}</h3></del>
-        </div>
+        
+            <div class="button flex gap-10">
+                <button class="btn jcc aic" (click)="handleClickProduct(product)">Quick View</button>
+                <button [routerLink]="['product',product?.slug]" class="btn">All details</button>
+                
+            </div>
     </div>
 </div>

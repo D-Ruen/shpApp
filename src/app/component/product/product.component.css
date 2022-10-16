@@ -1,0 +1,34 @@
+.product-container{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
+
+.product-container .product-image img{
+    
+    width: 400px;
+    
+}
+
+.product-container .product-image {
+    justify-content: flex-end;
+}
+
+
+@media screen and (max-width:900px){
+
+    .product-container{
+        flex-direction: column-reverse;
+    }
+    .product-container .product-image{
+        justify-content: center;
+    } 
+}
+
+@media screen and (max-width:450px){
+
+
+    .product-container .product-image img{
+        width: 95%;
+    } 
+}

@@ -1,0 +1,72 @@
+<!-- Controle a effectuer -->
+
+<div class="signup">
+    <div class="form-container">
+    <form action="">
+        <h2>Inscription</h2>
+        <div class="form-line flex gap-10 wrap">
+            <input class="flex-1 " type="text" name="firstname" placeholder="Your firstname..." [formControl]="firstname">
+            <input class="flex-1"type="text" name="lastname" placeholder="Your lastname..."[formControl]="lastname">
+        </div>
+        <div class="form-line flex">
+            <input class=" flex-1" type="email" name="email" placeholder="Your email please..."[formControl]="email">
+        </div>
+        <div class="form-line flex">
+            <input class=" flex-1" type="password" name="password" placeholder="Your password please..."[formControl]="password">
+        </div><div class="form-line flex">
+            <input class=" flex-1" type="password" name="passwordConfirm" placeholder="Please confirm your password..."[formControl]="passwordConfirm">
+        </div>
+        <div class="button flex">
+        <button class="btn flex-1"(click)="handleSubmit()">S'inscrire</button>
+        </div>
+     
+    </form>
+    </div>
+</div>
+
+
+<!-- <div class="signup signin aic jcc" >Inscription
+    <div class="container gap-10">
+        <div class="name gap-5 flex"> 
+                    
+            <div class="form-inline-firstname flex-1">       
+                <input type="text" 
+                name="firstname" 
+                placeholder="firstname."
+                [(ngModel)]="firstname"
+                >     
+            </div>
+             <div class="form-inline-lastname flex-1 ">
+                <input type="text" name="lastname" placeholder="Lastname" [(ngModel)]="lastname">
+            </div> 
+            
+        </div>
+        <div class="data">
+            <div class="form-inline-email">
+                <input type="text" name="email" placeholder="Email"[(ngModel)]="email">
+            </div>
+            <div class="form-inline-password">
+                <input type="text" name="password" placeholder="Password" [(ngModel)]="password">
+            </div>
+            
+            <div class="form-inline-confirm">
+                <input type="text" name="confirmPassword" placeholder="confirm Password" [(ngModel)]="confirmPassword">
+            </div>
+        </div>
+        <div class="button" >
+            <button class="btn">S'inscrire</button>
+            </div>
+        <ul>
+            <li *ngFor=" let name of listFirstname; let index=index" class="flex aic">
+                {{name}} 
+                <div class="name-action flex gap-10">
+                <button (click)="update(index)" class="btn">Update</button>
+                <button (click)="deleteName(index)" class="btn">delete</button>
+                </div>
+            </li>
+        </ul>
+        
+    </div>
+    "firstname" : "{{firstname}}", "lastname" : "{{lastname}}", "email" : "{{email}}", "password": "{{password}}"; "passwordConfirm":"{{confirmPassword}}"
+
+</div> -->

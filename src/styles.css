@@ -36,3 +36,70 @@ body{
     cursor: pointer;
     color: #1d1d1d;
 }
+.gap-5{
+    gap: 5px;
+}
+
+.gap-10{
+    gap: 10px;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+/* signin ou signup */
+.signup{
+    height:70vh;
+    width: 100%;
+}
+
+.btn{
+    height: 40px;
+    background-color: #1d1d1d;
+    border: none;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    min-width: 100px;
+}
+
+.form-container{
+    width: 500px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 0.1px solid #ccc;
+}
+form{
+   
+    padding: 5px;
+    background-color: white;
+}
+
+form .form-line{
+    min-height: 40px;
+    padding: 10px 0;
+}
+
+form .form-line input{
+    height: 40px;
+    font-size: 1.1rem;
+}
+
+
+@media screen and (max-width:550px) {
+    .form-container{
+        width:90% ;
+    }
+    
+}
+
+/* ********************************Single Product******************************* */
+.content{
+    width: 80%;
+    margin: 0 auto;
+    min-height: 70vh;
+}

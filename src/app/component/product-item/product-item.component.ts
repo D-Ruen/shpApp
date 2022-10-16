@@ -16,12 +16,16 @@ export class ProductItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("--------------PRODUCT ITEM-------------")
-    console.log(this.product)
+    // console.log("--------------PRODUCT ITEM-------------")
+    // console.log(this.product)
   }
 
   handleClickProduct(product: Product | undefined){
     this.displayProductViewModal.emit(product)
+  }
+
+  handleDetails(product:Product|undefined){
+
   }
 
   deleteProduct(product: Product |undefined){
