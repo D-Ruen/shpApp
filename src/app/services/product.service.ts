@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { interval, Observable, of } from 'rxjs';
 import { Product } from '../models/product';
 import { environment } from 'src/environments/environment';
+import { ResultsRequest } from '../models/results-request';
 
 
 
@@ -12,7 +13,7 @@ import { environment } from 'src/environments/environment';
 export class ProductService {
   
   private products: Product[]=[];
-  private urlApi: string= environment.serverUrl
+  private urlApi: string= environment.serverUrl.products
 
   constructor(private http: HttpClient ) { }
 
@@ -27,8 +28,8 @@ export class ProductService {
   //   })
   // }
 
-  getProducts():Observable<Product[]>{
-    return this.http.get<Product[]>(this.urlApi)
+  getProducts():Observable<ResultsRequest<Product>>{
+    return this.http.get<ResultsRequest<Product>>(this.urlApi)
     
   }
 

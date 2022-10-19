@@ -1,0 +1,11 @@
+<div class="aside-nav mobile-nav flex"
+(mouseleave)="handleClose()">
+
+    <ul class="unlisted">
+        <li 
+        (click)="handleClose()" *ngFor="let items of navs_data" ><a [routerLink]="items?.path"> {{items?.name}}  </a></li>
+        <li (click)="handleClose()" *ngFor="let items of auths_data"><a [routerLink]="items?.path" > {{items?.name}} </a></li>
+       
+    </ul>
+
+</div>

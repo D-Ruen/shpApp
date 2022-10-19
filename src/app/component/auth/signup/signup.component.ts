@@ -43,7 +43,7 @@ export class SignupComponent implements OnInit {
       lastname:this.lastname,
       email:this.email,
       password:this.password,
-      passwordConfirm:this.passwordConfirm,
+      passwordConfirm:this.passwordConfirm
 
     })
   }

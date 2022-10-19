@@ -2,6 +2,7 @@ import { style } from '@angular/animations';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Product } from 'src/app/models/product';
+import { ResultsRequest } from 'src/app/models/results-request';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -24,7 +25,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   //   isSolded:false,
 
   // }
-  products: Product[]=[]
+  products: ResultsRequest<Product> |undefined
   constructor(private productService: ProductService) { 
     // this.title="My Shop" pour permettre une mise a jour suivant l'objet
   }
@@ -32,8 +33,12 @@ export class ProductListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // this.products= this.productService.getProducts()
     this.productsSub=this.productService.getProducts().subscribe({
-      next:(products:Product[])=>{
+      next:(products:ResultsRequest<Product>)=>{
+        
         this.products=products
+        console.log(products)
+        // console.log(this.products);
+        
         this.isloading=false
       },
       error:(error:any)=>{
@@ -51,7 +56,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   }
 
 handleDeleteProduct(product: Product){
-  this.products=this.products.filter(p =>p._id !==product._id)
+  // this.products=this.products.filter(p =>p._id !==product._id)
   // console.log("handeDeleteProduct : ", product)
  }
 handleDisplayViewModal(product:Product){

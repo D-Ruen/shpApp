@@ -1,13 +1,20 @@
 <header>
+        <div class="bars none" (click)="handleDisplayMobileNav()">
+           
+            <img src="/assets/images/icons/bars.png" alt="">
+          
+        </div>
     <div class="logo">
-        <a href="">Shop</a>
+        <a routerLink="">{{siteName}}</a>
     </div>
+  
     <div class="nav-bar">
         <ul>
-            <li><a routerLink=""> HOME </a></li>
-            <li><a routerLink="signup">Sign Up</a></li>
-            <li><a routerLink="signin">Sign In</a></li>
-           
+            <li *ngFor="let items of navs_data"><a [routerLink]="items.path"> {{items.name}} </a></li>
+            <li *ngFor="let items of auths_data"><a [routerLink]="items.path" class="btn"> {{items.name}} </a></li>           
         </ul>
     </div>
+  
 </header>
+
+  <app-aside-nav (close)="handleCloseMobileNav()" *ngIf="isDisplayedMobileNav"></app-aside-nav>

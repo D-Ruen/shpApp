@@ -1,8 +1,8 @@
 <div class="signup">
     <div class="form-container">
     <form action="" [formGroup]="signinForm">
-        <h2>Connexion</h2>
-        
+        <h2>Sign In</h2>
+            <p class="tc">Don't have a account? If yes then click here to <a routerLink="/signup">register</a></p>
         <div class="form-line flex">
             <input class=" flex-1" type="email" [formControl]="email" name="email" placeholder="Your email please...">
         </div>
@@ -20,7 +20,7 @@
                 Password must be of at least 6 characters
             </p></div>
         <div class="button flex">
-        <button class="btn flex-1"[disabled]="!this.signinForm.valid" (click)="handleSubmit()">Se connecter</button>
+        <button class="btn flex-1"[disabled]="!this.signinForm.valid" (click)="handleSubmit()">Sign In</button>
         </div>
     </form>
     </div>

@@ -4,6 +4,7 @@
     <div class="form-container">
     <form action="">
         <h2>Inscription</h2>
+        <p class="tc">You already have an account? If yes then click here to <a routerLink="/signin">login</a></p>
         <div class="form-line flex gap-10 wrap">
             <input class="flex-1 " type="text" name="firstname" placeholder="Your firstname..." [formControl]="firstname">
             <input class="flex-1"type="text" name="lastname" placeholder="Your lastname..."[formControl]="lastname">
@@ -17,7 +18,7 @@
             <input class=" flex-1" type="password" name="passwordConfirm" placeholder="Please confirm your password..."[formControl]="passwordConfirm">
         </div>
         <div class="button flex">
-        <button class="btn flex-1"(click)="handleSubmit()">S'inscrire</button>
+        <button class="btn flex-1"(click)="handleSubmit()">Register</button>
         </div>
      
     </form>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductListComponent } from '../product-list/product-list.component';
 
 @Component({
   selector: 'app-container',
@@ -10,6 +11,7 @@ export class ContainerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    window.scrollTo(0,0)
   }
 
 }

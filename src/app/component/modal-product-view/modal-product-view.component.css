@@ -19,14 +19,29 @@
     opacity: 0.8;
     background-color: #1d1d1d;
 }
+.modal-product-view-details-prize del h4 {
+    font-size: 2rem;
+    color: #3f51b5;
+    font-weight: bold;
+}
+.modal-product-view-details-prize h4{
+    font-size: 3rem;
+    color: #3f51b5;
+    font-weight: bold;
+}
 
 .modal-product-view-container img{
     width: 100%;
     height: 100%;
 }
 
-.modal-product-view-container{
-    text-align: center;
+.modal-product-view-details-button{
+   
+    width: 95%;
+}
+.modal-product-view-details-button button {
+     height: 45px;
+     background-color: #3f51b5;
 }
 
 @media screen and (max-width:660px){

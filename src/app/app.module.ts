@@ -15,7 +15,17 @@ import { SignupComponent } from './component/auth/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import{ RouterModule} from'@angular/router'
 import { ROUTES } from 'src/app/app.routing';
-import { LoadingComponent } from './loading/loading.component';
+import { LoadingComponent } from './component/loading/loading.component';
+import { PaymentCardComponent } from './component/container/payment-card/payment-card.component';
+import { ProductDetailsComponent } from './component/product-details/product-details.component';
+import { ProductDescriptionComponent } from './component/product-tabs/product-description/product-description.component';
+import { ProductAdditionnalInfoComponent } from './component/product-tabs/product-additionnal-info/product-additionnal-info.component';
+import { ProductVendorComponent } from './component/product-tabs/product-vendor/product-vendor.component';
+import { ProductReviewsComponent } from './component/product-tabs/product-reviews/product-reviews.component';
+import { AsideNavComponent } from './component/aside-nav/aside-nav.component';
+import { HomeSliderComponent } from './component/home-slider/home-slider.component';
+import { ProductsCategoryComponent } from './component/products-category/products-category.component';
+import { PageTitleComponent } from './page-title/page-title.component';
 
 
 @NgModule({
@@ -31,6 +41,16 @@ import { LoadingComponent } from './loading/loading.component';
     SigninComponent,
     SignupComponent,
     LoadingComponent,
+    PaymentCardComponent,
+    ProductDetailsComponent,
+    ProductDescriptionComponent,
+    ProductAdditionnalInfoComponent,
+    ProductVendorComponent,
+    ProductReviewsComponent,
+    AsideNavComponent,
+    HomeSliderComponent,
+    ProductsCategoryComponent,
+    PageTitleComponent,
    
   ],
   imports: [

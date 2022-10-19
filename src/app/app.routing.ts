@@ -2,7 +2,12 @@ import { Routes } from "@angular/router";
 import { SigninComponent } from "./component/auth/signin/signin.component";
 import { SignupComponent } from "./component/auth/signup/signup.component";
 import { ContainerComponent } from "./component/container/container.component";
+import { ProductAdditionnalInfoComponent } from "./component/product-tabs/product-additionnal-info/product-additionnal-info.component";
+import { ProductDescriptionComponent } from "./component/product-tabs/product-description/product-description.component";
+import { ProductReviewsComponent } from "./component/product-tabs/product-reviews/product-reviews.component";
+import { ProductVendorComponent } from "./component/product-tabs/product-vendor/product-vendor.component";
 import { ProductComponent } from "./component/product/product.component";
+import { ProductsCategoryComponent } from "./component/products-category/products-category.component";
 
 export const ROUTES:Routes=[
     {
@@ -13,7 +18,36 @@ export const ROUTES:Routes=[
     {
         path:'product/:slug',
         component:ProductComponent,
-        pathMatch:"full"
+        // pathMatch:"full"
+        children:[
+            {
+                path:"",
+                redirectTo:"description",
+                pathMatch:"prefix"
+            },
+            {
+                path:"description",
+                component:ProductDescriptionComponent
+            },
+            {
+                path:"additionnal-info",
+                component:ProductAdditionnalInfoComponent,
+            },
+            {
+                path:"product-vendor",
+                component:ProductVendorComponent
+            },
+            {
+                path:"product-reviews",
+                component:ProductReviewsComponent
+            }
+
+        ]
+    },
+    {
+        path:"products",
+        component:ProductsCategoryComponent,
+        pathMatch:'full'
     },
     {
         path:"signin",

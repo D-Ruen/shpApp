@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  serverUrl: "http://localhost/assets/API/productsAll.json",
+  serverUrl:{
+    products: "http://localhost/assets/API/productsAllFour.json",
+    categories:"http://localhost/asstets/APU/categories.json"
+  },
+  siteName:"ZilStore"
 };
 
 /*
