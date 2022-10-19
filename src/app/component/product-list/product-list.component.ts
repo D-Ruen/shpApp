@@ -1,5 +1,5 @@
 import { style } from '@angular/animations';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Product } from 'src/app/models/product';
 import { ResultsRequest } from 'src/app/models/results-request';
@@ -10,12 +10,12 @@ import { ProductService } from 'src/app/services/product.service';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent implements OnInit, OnDestroy {
+export class ProductListComponent implements OnInit {
 
   isDisplayModal:boolean=false
   modalProduct: Product |undefined
-  productsSub:Subscription |undefined
-  isloading:boolean=true
+  @Input() isLoading:boolean=true
+  @Input() products: Product[] = []
 
   // product: object={
   //   name:"Robe pour femmes",
@@ -25,38 +25,21 @@ export class ProductListComponent implements OnInit, OnDestroy {
   //   isSolded:false,
 
   // }
-  products: ResultsRequest<Product> |undefined
+ 
   constructor(private productService: ProductService) { 
     // this.title="My Shop" pour permettre une mise a jour suivant l'objet
   }
 
+  
+
   ngOnInit(): void {
-    // this.products= this.productService.getProducts()
-    this.productsSub=this.productService.getProducts().subscribe({
-      next:(products:ResultsRequest<Product>)=>{
-        
-        this.products=products
-        console.log(products)
-        // console.log(this.products);
-        
-        this.isloading=false
-      },
-      error:(error:any)=>{
-        console.log("Error : ",error)
-        this.isloading=true
-      },
-      complete:()=>{
-        console.log("Complete !")
-      },
-    })
+   
 
 }    
-  ngOnDestroy(){
-    this.productsSub?.unsubscribe()
-  }
+  
 
 handleDeleteProduct(product: Product){
-  // this.products=this.products.filter(p =>p._id !==product._id)
+  this.products=this.products.filter(p =>p._id !==product._id)
   // console.log("handeDeleteProduct : ", product)
  }
 handleDisplayViewModal(product:Product){
@@ -69,5 +52,4 @@ handleDisplayViewModal(product:Product){
 handleCloseModal(){
   this.isDisplayModal=false
   this.modalProduct= undefined
-}
-}
+}}

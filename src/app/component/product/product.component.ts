@@ -31,7 +31,7 @@ export class ProductComponent implements OnInit, OnDestroy {
     this.slug=this.route.snapshot.params["slug"]
     this.productSub=this.productService.getProducts().subscribe({
       next:(resultData: ResultsRequest<Product>)=>{
-        if(resultData.isSucces){
+        if(resultData.isSuccess){
         this.product= resultData.results.filter(p=>p.slug===this.slug)[0]
         this.currentImage= this.product.imageUrl[0]
         // console.log(this.product)

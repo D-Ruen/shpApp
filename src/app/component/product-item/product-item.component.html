@@ -1,7 +1,7 @@
 
 <div class="product-item" >
     <div class="product-image">
-        <a [routerLink]="['product',product?.slug]">
+        <a [routerLink]="['/product',product?.slug]">
             <img [src]="product ? product.imageUrl[0] :'src/assets/image/Robe-violet.jfif'"  alt="{{product?.name}}" >
         </a>
     </div>

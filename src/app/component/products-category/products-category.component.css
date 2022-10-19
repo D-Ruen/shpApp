@@ -1,0 +1,36 @@
+.product-category-container{
+    min-height: 70vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.product-category-aside{
+    min-width: 200px;
+    text-align: center;
+    position: fixed;
+    left: 10px;
+}
+.product-category-aside ul li a{
+    display: block;
+    height: 40px;
+    background-color: #ccc;
+    margin-bottom: 5px;
+    line-height: 50px;
+    font-weight: bold;
+    padding: 0 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.product-category-aside ul li a.active{
+    background-color: #3f51b5;
+    color:white
+    
+}
+
+
+@media screen and (max-width:1200px){
+    .product-category-aside{
+        display: none;
+    }
+    
+}

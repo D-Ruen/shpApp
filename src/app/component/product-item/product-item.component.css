@@ -41,6 +41,10 @@ a{
 .product-item .product-prize h3{
     margin: 0;
 }
+.product-item .product-prize h4{
+    border-radius: 20px;
+    padding: 3px;
+}
 
 .product-item .product-image img{
     width: 100%;

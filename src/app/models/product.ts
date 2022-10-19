@@ -1,8 +1,10 @@
+import { Category } from "./category";
+
 export interface Product {
     _id:string,
     name:string,
     description:string,
-    categories:string[],
+    categories:Category[],
     imageUrl:string[],
     slug?: string,
     author?:string, 

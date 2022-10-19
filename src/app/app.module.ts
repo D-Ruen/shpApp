@@ -25,7 +25,7 @@ import { ProductReviewsComponent } from './component/product-tabs/product-review
 import { AsideNavComponent } from './component/aside-nav/aside-nav.component';
 import { HomeSliderComponent } from './component/home-slider/home-slider.component';
 import { ProductsCategoryComponent } from './component/products-category/products-category.component';
-import { PageTitleComponent } from './page-title/page-title.component';
+import { PageTitleComponent } from './component/page-title/page-title.component';
 
 
 @NgModule({

@@ -1,5 +1,5 @@
 export interface ResultsRequest<T> {
-    isSucces:boolean,
+    isSuccess:boolean,
     statusCode:number,
     length:number,
     results:Array<T>

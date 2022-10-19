@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   serverUrl:{
     products: "http://localhost/assets/API/productsAllFour.json",
-    categories:"http://localhost/asstets/APU/categories.json"
+    categories:"http://localhost/assets/API/categories.json"
   },
   siteName:"ZilStore"
 };

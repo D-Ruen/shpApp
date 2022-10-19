@@ -1,5 +1,16 @@
-
-<div class="product-category-container flex">
-<div class="product-category-aside flex-1 b" ></div>
-<div class="product-category-list flex-3 b"></div>
+<app-page-title title="Products"></app-page-title>
+<div class="product-category-container flex content">
+<div class="product-category-aside flex-1 " >
+    <div class="category-list">
+        <ul class="unlisted">
+            <li *ngFor="let category of categories?.results">
+                <a href="#" (click)="handleClickCategory($event,category)" 
+                [ngClass]="{'active': category.slug === currentCategory?.slug}">{{category.name}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="product-category-list flex-1 flex wrap jcc gap-10" >
+    <app-product-list [products]="products" [isLoading]="isLoading" ></app-product-list>
+</div>
 </div>
