@@ -1,0 +1,81 @@
+<app-page-title title="Contact Us"></app-page-title>
+<div class="contact-container content ">
+    <form action="" method="post" [formGroup]="contactGroup" >
+
+        <div class="form-line flex gap-10">
+            <input type="text" name="name" id="name" class="flex-1" placeholder="Name" [formControl]="name">
+            <input type="email" name="email" id="email" class="flex-1" placeholder="Email"[formControl]="email">
+        </div>
+        <div class="error" *ngIf="name.dirty && !name.valid">
+            <p *ngIf="name.hasError('required')"> name is required</p>            
+            <p *ngIf="name.hasError('minlength')"> name must be at least 3 characters</p>
+        </div>
+        <div class="error" *ngIf="email.dirty && !email.valid">
+            <p *ngIf="email.hasError('required')"> email is required</p>            
+            <p *ngIf="email.hasError('email')"> email not valid</p>
+        </div>
+        <div class="form-line flex gap-10">
+            <input type="tel" name="phone" id="phone"class="flex-1" placeholder="Phone" [formControl]="phone">
+            <input type="text" name="subject" id="subject"class="flex-1" placeholder="Subject" [formControl]="subject"> 
+        </div>
+        <div class="error" *ngIf="phone.dirty && !phone.valid">
+            <p *ngIf="phone.hasError('required')"> phone is required</p>            
+        </div>
+        <div class="error" *ngIf="subject.dirty && !subject.valid">
+            <p *ngIf="subject.hasError('required')"> subject is required</p>            
+            <p *ngIf="subject.hasError('minlength')"> subject must be at least 10 characters</p>
+        </div>
+        <div class="form-textarea flex">
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" class="flex-1" [formControl]="message"></textarea>
+        </div>
+        <div class="error" *ngIf="message.dirty && !message.valid">
+            <p *ngIf="message.hasError('required')"> message is required</p>            
+            <p *ngIf="message.hasError('minlength')"> message must be at least 20 characters</p>
+        </div>
+        <div class="form-button">
+            <button class="btn" [disabled]="!contactGroup.valid" (click)="handleSubmit()">Send message</button>
+        </div>
+    </form>
+        
+</div>
+    
+    
+    
+<!--     
+    
+    ---------------------------------MADE BY ME---------------------
+    
+    <div class="contact-personnal  flex gap-10 aic jcc ">
+            <input class="flex-1" type="text" placeholder="Your name..." [formControl]="name">
+            <input class="flex-1" type="email" placeholder="Your Email..." [formControl]="email">
+         </div>    
+         <div class="error" *ngIf="(email.dirty && !email.valid)||(name.dirty && !name.valid) ">
+               
+            <p *ngIF="!name.hasError('required')">you must enter your name </p>
+            <p *ngIf="!email.hasError('required')"> Email not valid</p>   
+               
+         </div>
+       
+        <div class="contact-subject flex gap-10 aic jcc">
+            <input class="flex-1" type="phone" placeholder="Your phone number..." [formControl]="phone">
+            <input class="flex-1" type="text" placeholder="Subject ?" [formControl]="subject">
+        </div>
+        <div class="error" *ngIf="(phone.dirty && !phone.valid)||(subject.dirty && !subject.valid) ">
+
+            <p *ngIf="!phone.hasError('required')"> you must enter your phone nummer</p>
+            <p *ngIF="!subject.hasError('minlength')">must be at least 6 characters</p>
+           
+         </div>
+        <div  class="contact-message flex 1 ">
+            <input type="text" placeholder="Message" [formControl]="message">
+        </div>
+        <div class="error" *ngIf="(phone.dirty && !phone.valid) ">
+
+            <p *ngIf="!message.hasError('minlength')"> must be at least 10 characters</p>
+            
+           
+         </div>
+        <div class="contact-button ">
+            <button class="btn" [disabled]="!this.contactGroup.valid" (click)="handleClick()">Send message</button>
+        </div>
+    </div> --> 

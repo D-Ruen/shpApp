@@ -132,6 +132,10 @@ form .form-line{
 form .form-line input{
     height: 40px;
     font-size: 1.1rem;
+    padding: 10px;
+    border: 0.1px solid #ccc;
+    outline-color: #3f51b5;
+    border-radius: 10px;
 }
 p{
     margin: 0;

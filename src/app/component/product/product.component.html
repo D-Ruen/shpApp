@@ -3,6 +3,7 @@
    <div class="product-image flex flex-1 gap-10">
         <div class="product-image-one-list flex column gap-5 ">
             <img 
+            class="flex-1"
             [ngClass]="{current: currentImage == url}"
             *ngFor="let url of product?.imageUrl"
             [src]="url" [alt]="product?.name"

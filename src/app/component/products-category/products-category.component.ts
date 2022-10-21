@@ -30,7 +30,7 @@ export class ProductsCategoryComponent implements OnInit,OnDestroy {
      
         if(result.isSuccess){
           this.categories=result
-          this.handleClickCategory(null,this.categories.results[0])
+          this.handleClickCategory(null,this.categories.results[2])
           
         }
       },
@@ -50,10 +50,11 @@ export class ProductsCategoryComponent implements OnInit,OnDestroy {
 
   handleClickCategory(event :any,category :Category){
     this.currentCategory=category
+    window.scrollTo(0,0)
     if(event){
     event.preventDefault()
     }
-    this.isLoading=true
+    // this.isLoading=true
     this.productSub=this.productService.getProducts().subscribe({
       next:(result:ResultsRequest<Product>)=>{
         if(result.isSuccess){

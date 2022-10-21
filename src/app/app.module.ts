@@ -26,6 +26,8 @@ import { AsideNavComponent } from './component/aside-nav/aside-nav.component';
 import { HomeSliderComponent } from './component/home-slider/home-slider.component';
 import { ProductsCategoryComponent } from './component/products-category/products-category.component';
 import { PageTitleComponent } from './component/page-title/page-title.component';
+import { ContactComponent } from './component/contact/contact.component';
+import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -51,6 +53,8 @@ import { PageTitleComponent } from './component/page-title/page-title.component'
     HomeSliderComponent,
     ProductsCategoryComponent,
     PageTitleComponent,
+    ContactComponent,
+    PageNotFoundComponent,
    
   ],
   imports: [

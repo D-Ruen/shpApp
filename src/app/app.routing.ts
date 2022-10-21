@@ -1,7 +1,9 @@
 import { Routes } from "@angular/router";
 import { SigninComponent } from "./component/auth/signin/signin.component";
 import { SignupComponent } from "./component/auth/signup/signup.component";
+import { ContactComponent } from "./component/contact/contact.component";
 import { ContainerComponent } from "./component/container/container.component";
+import { PageNotFoundComponent } from "./component/page-not-found/page-not-found.component";
 import { ProductAdditionnalInfoComponent } from "./component/product-tabs/product-additionnal-info/product-additionnal-info.component";
 import { ProductDescriptionComponent } from "./component/product-tabs/product-description/product-description.component";
 import { ProductReviewsComponent } from "./component/product-tabs/product-reviews/product-reviews.component";
@@ -50,6 +52,11 @@ export const ROUTES:Routes=[
         pathMatch:'full'
     },
     {
+        path:"contact",
+        component:ContactComponent,
+        pathMatch:"full"
+    },
+    {
         path:"signin",
         component:SigninComponent,
         pathMatch:"full"
@@ -58,6 +65,10 @@ export const ROUTES:Routes=[
         path:"signup",
         component:SignupComponent,
         pathMatch:"full"
+    },
+    {
+        path:'**',
+        component:PageNotFoundComponent
     }
 
 ]
